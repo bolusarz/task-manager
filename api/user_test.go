@@ -29,7 +29,7 @@ func (e eqCreateUserParamsMatcher) Matches(x interface{}) bool {
 		return false
 	}
 
-	err := util.Comparepassword(e.password, arg.PasswordHash)
+	err := util.ComparePassword(e.password, arg.PasswordHash)
 	if err != nil {
 		return false
 	}
